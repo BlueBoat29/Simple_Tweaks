@@ -1,44 +1,12 @@
 {
-  "minecraft:recipes/tools/flint_and_steel": {
-    "criteria": {
-      "has_obsidian": "2020-07-18 17:34:12 -0500"
-    },
-    "done": true
-  },
-  "minecraft:nether/root": {
-    "criteria": {
-      "entered_nether": "2020-07-18 17:34:27 -0500"
-    },
-    "done": true
-  },
-  "minecraft:story/form_obsidian": {
-    "criteria": {
-      "obsidian": "2020-07-18 17:34:12 -0500"
-    },
-    "done": true
-  },
-  "minecraft:story/enter_the_nether": {
-    "criteria": {
-      "entered_nether": "2020-07-18 17:34:27 -0500"
-    },
-    "done": true
-  },
-  "minecraft:recipes/decorations/enchanting_table": {
-    "criteria": {
-      "has_obsidian": "2020-07-18 17:34:12 -0500"
-    },
-    "done": true
-  },
-  "minecraft:nether/explore_nether": {
-    "criteria": {
-      "minecraft:nether_wastes": "2020-07-18 17:34:33 -0500",
-      "minecraft:soul_sand_valley": "2020-07-18 17:34:27 -0500"
-    },
-    "done": false
-  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
-      "minecraft:plains": "2020-07-18 17:33:11 -0500"
+      "minecraft:desert_hills": "2020-07-18 18:04:42 -0500",
+      "minecraft:desert": "2020-07-18 18:03:29 -0500",
+      "minecraft:river": "2020-07-18 18:04:02 -0500",
+      "minecraft:wooded_hills": "2020-07-18 18:03:28 -0500",
+      "minecraft:savanna": "2020-07-18 18:04:26 -0500",
+      "minecraft:plains": "2020-07-18 18:03:19 -0500"
     },
     "done": false
   },

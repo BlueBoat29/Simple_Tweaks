@@ -1,6 +1,7 @@
 package com.blueboat.simpletweaks.util;
 
 import com.blueboat.simpletweaks.SimpleTweaks;
+import com.blueboat.simpletweaks.blocks.HardenedSandBlock;
 import com.blueboat.simpletweaks.blocks.JukeboxBase;
 import com.blueboat.simpletweaks.blocks.NetherThatchBlock;
 import com.blueboat.simpletweaks.blocks.NetherThatchSlab;
@@ -78,6 +79,7 @@ public class RegistryHandler {
 	public static final RegistryObject<Block> WARPED_THATCH_SLAB_BLOCK = BLOCKS.register("warped_thatch_slab_block", NetherThatchSlab::new);
 	public static final RegistryObject<Block> WARPED_THATCH_STAIR_BLOCK = BLOCKS.register("warped_thatch_stair_block", NetherThatchStair::new);
 	public static final RegistryObject<Block> SOUL_COAL_ORE = BLOCKS.register("soul_coal_ore", SoulCoalOre::new);
+	public static final RegistryObject<Block> HARD_SAND_BLOCK = BLOCKS.register("hard_sand_block", HardenedSandBlock::new);
 	
 	//Block Items
 	public static final RegistryObject<Item> WITHERED_GLASS_BLOCK_ITEM = ITEMS.register("withered_glass_block_item", () -> new BlockItemBase(WITHERED_GLASS_BLOCK.get()));
@@ -92,5 +94,6 @@ public class RegistryHandler {
 	public static final RegistryObject<Item> WARPED_THATCH_SLAB_BLOCK_ITEM= ITEMS.register("warped_thatch_slab_block_item", () -> new BlockItemBase(WARPED_THATCH_SLAB_BLOCK.get()));
 	public static final RegistryObject<Item> WARPED_THATCH_STAIR_BLOCK_ITEM= ITEMS.register("warped_thatch_stair_block_item", () -> new BlockItemBase(WARPED_THATCH_STAIR_BLOCK.get()));
 	public static final RegistryObject<Item> SOUL_COAL_ORE_ITEM = ITEMS.register("soul_coal_ore_item", () -> new BlockItemBase(SOUL_COAL_ORE.get()));
+	public static final RegistryObject<Item> HARD_SAND_BLOCK_ITEM = ITEMS.register("hard_sand_block_item", () -> new BlockItemBase(HARD_SAND_BLOCK.get()));
 }
 

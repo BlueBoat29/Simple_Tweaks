@@ -24,17 +24,22 @@ import com.blueboat.simpletweaks.util.RegistryHandler;;
 public class OreGenHandler {
 
 	public static OreFeatureConfig.FillerBlockType SOUL_SOIL = OreFeatureConfig.FillerBlockType.create("SOUL_SOIL", "soul_soil", new BlockMatcher(Blocks.field_235336_cN_));
+	public static OreFeatureConfig.FillerBlockType SANDSTONE = OreFeatureConfig.FillerBlockType.create("SANDSTONE", "sandstone", new BlockMatcher(Blocks.SANDSTONE));
 	
 	
 	@SubscribeEvent
 	public static void GenerateOres(FMLLoadCompleteEvent event) {
 		for(Biome biome: ForgeRegistries.BIOMES) 
 		{
-			
-			if(biome.getCategory() == Biome.Category.NETHER) 
+			if(biome.getCategory() == Biome.Category.THEEND) {}
+			else if(biome.getCategory() == Biome.Category.NETHER) 
 			{ if(biome == Biomes.field_235252_ay_) {
 				GenOre(biome, 30, 3, 5, 200, SOUL_SOIL, RegistryHandler.SOUL_COAL_ORE.get().getDefaultState(), 15);
 				}
+			}
+			else 
+			{
+				GenOre(biome, 10, 20, 3, 100, SANDSTONE, RegistryHandler.HARD_SAND_BLOCK.get().getDefaultState(), 64);				
 			}
 		}
 	}
