@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":
+  [
+    "bbb",
+    "bbb",
+    "bbb"
+  ],
+  "key":
+  {
+    "b":
+    {
+      "item": "stweaks:quartz_gold_ingot"
+    }
+  },
+	"result": {
+		"item": "stweaks:quartz_gold_block_item",
+		"count": 1
+	}
+}

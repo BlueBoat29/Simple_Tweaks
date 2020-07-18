@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x x",
+    " x ",
+    "x x"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "minecraft:warped_planks"
+    }
+  },
+  "result":
+  {
+    "item": "stweaks:warped_jukebox_block_item",
+    "count": 5
+  }
+}

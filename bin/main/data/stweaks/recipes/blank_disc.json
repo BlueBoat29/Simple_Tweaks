@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx",
+    "x x",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "stweaks:blackish_dust"
+    }
+  },
+  "result":
+  {
+    "item": "stweaks:blank_disc",
+    "count": 1
+  }
+}

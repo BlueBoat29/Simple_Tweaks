@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "stweaks:quartz_gold_dust"
+  },
+  "result": "stweaks:quartz_gold_ingot",
+  "experience": 3,
+  "cookingtime": 200
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stweaks:block/crimson_thatch_slab"
+    },
+    "type=double": {
+      "model": "stweaks:block/crimson_thatch_block"
+    },
+    "type=top": {
+      "model": "stweaks:block/crimson_thatch_slab_top"
+    }
+  }
+}

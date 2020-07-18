@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stweaks:block/warped_thatch_slab"
+    },
+    "type=double": {
+      "model": "stweaks:block/warped_thatch_block"
+    },
+    "type=top": {
+      "model": "stweaks:block/warped_thatch_slab_top"
+    }
+  }
+}

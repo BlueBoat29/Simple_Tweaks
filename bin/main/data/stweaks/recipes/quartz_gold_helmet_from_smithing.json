@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:golden_helmet"
+  },
+  "addition": {
+    "item": "stweaks:quartz_gold_ingot"
+  },
+  "result": {
+    "item": "stweaks:quartz_gold_helmet"
+  }
+}

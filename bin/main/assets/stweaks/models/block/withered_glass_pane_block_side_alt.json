@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_glass_pane_side_alt",
+  "textures": {
+    "pane": "stweaks:blocks/withered_glass_block",
+    "edge": "stweaks:blocks/withered_glass_pane_top"
+  }
+}

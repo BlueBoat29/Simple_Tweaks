@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "stweaks:warped_thatch_block_item"
+    }
+  },
+  "result":
+  {
+    "item": "stweaks:warped_thatch_slab_block_item",
+    "count": 6
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "xx ",
+    "xx "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "stweaks:coal_chunck"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:coal",
+    "count": 1
+  }
+}

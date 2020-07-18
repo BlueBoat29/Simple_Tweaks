@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "",
+    "x x",
+    " x "
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "stweaks:withered_glass_block_item"
+    }
+  },
+  "result":
+  {
+    "item": "minecraft:glass_bottle",
+    "count": 3
+  }
+}

@@ -1,0 +1,39 @@
+{
+	//Items
+	"item.stweaks.grinding_bowl": "Grinding Bowl",
+	"item.stweaks.withered_shard": "Withered Glass Shard",
+	"item.stweaks.blackish_dust": "Blackish Dust",
+	"item.stweaks.blank_disc": "Blank Disc",
+	"item.stweaks.reddish_dust": "Reddish dust",
+	"item.stweaks.red_blank_disc": "Blank Red Disc",
+	"item.stweaks.quartz_dust": "Quartz Dust",
+	"item.stweaks.quartz_gold_dust": "Quartz Gold Alloy",
+	"item.stweaks.quartz_gold_ingot": "Quartz Gold Ingot",
+	"item.stweaks.coal_chunck" : "Coal Chunks",
+	//Tools
+	"item.stweaks.quartz_gold_sword": "Quartz Gold Sword",
+	"item.stweaks.quartz_gold_pickaxe": "Quartz Gold Pickaxe",
+	"item.stweaks.quartz_gold_axe": "Quartz Gold Axe",
+	"item.stweaks.quartz_gold_shovel": "Quartz Gold Shovel",
+	"item.stweaks.quartz_gold_hoe": "Quartz Gold Hoe",
+	//Armor
+	"item.stweaks.quartz_gold_helmet": "Quartz Gold Helmet",
+	"item.stweaks.quartz_gold_chestplate": "Quartz Gold Chestplate",
+	"item.stweaks.quartz_gold_leggings": "Quartz Gold Leggings",
+	"item.stweaks.quartz_gold_boots": "Quartz Gold Boots",
+	//Item Group
+	"itemGroup.simpleTab": "Simple Tweaks",
+	//Blocks
+	"block.stweaks.withered_glass_block": "Withered Glass",
+	"block.stweaks.quartz_gold_block": "Block of Quartz Gold",
+	"block.stweaks.withered_glass_pane_block": "Withered Glass Pane",
+	"block.stweaks.crimson_jukebox_block": "Crimson Checkered Block",
+	"block.stweaks.warped_jukebox_block": "Warped Checkered Block",
+	"block.stweaks.crimson_thatch_block": "Crimson Thatch",
+	"block.stweaks.crimson_thatch_slab_block": "Crimson Thatch Slab",
+	"block.stweaks.crimson_thatch_stair_block" : "Crimson Thatch Stair",
+	"block.stweaks.warped_thatch_block" : "Warped Thatch",
+	"block.stweaks.warped_thatch_slab_block" : "Warped Thatch Slab",
+	"block.stweaks.warped_thatch_stair_block" : "Warped Thatch Stair",
+	"block.stweaks.soul_coal_ore" : "Nether Coal Ore"
+}

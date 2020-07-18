@@ -1,0 +1,36 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":
+  [
+    " g ",
+    "cda",
+    " b "
+  ],
+  "key":
+  {
+    "b":
+    {
+      "item": "stweaks:grinding_bowl"
+    },
+    "g":
+    {
+    	"item": "minecraft:cobblestone"
+    },
+    "c":
+    {
+      "item": "minecraft:granite"
+    },
+ 	"d":
+ 	{
+ 		"item": "minecraft:diorite"
+ 	},
+ 	"a":
+ 	{
+ 		"item": "minecraft:andesite"
+ 	}  
+  },
+	"result": {
+		"item": "stweaks:blackish_dust",
+		"count": 4
+	}
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:flint"
+    },
+    {
+    	"item": "minecraft:bowl"
+    }
+  ],
+  "result":
+  {
+    "item": "stweaks:grinding_bowl",
+    "count": 1
+  }
+}

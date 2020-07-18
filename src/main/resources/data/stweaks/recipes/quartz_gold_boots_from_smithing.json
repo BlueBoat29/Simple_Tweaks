@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "minecraft:golden_boots"
+  },
+  "addition": {
+    "item": "stweaks:quartz_gold_ingot"
+  },
+  "result": {
+    "item": "stweaks:quartz_gold_boots"
+  }
+}

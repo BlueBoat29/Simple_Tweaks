@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"x x",
+		" x ",
+		"x x"
+	],
+	"key": {
+		"x": {
+			"item": "minecraft:crimson_planks"
+		}
+	},
+	"result": {
+		"item": "stweaks:crimson_jukebox_block_item",
+		"count": 5
+	}
+}

@@ -1,0 +1,55 @@
+
+modLoader="javafml" #mandatory
+
+loaderVersion="[32,)" #mandatory This is typically bumped every Minecraft version by Forge. See our download page for lists of versions.
+
+issueTrackerURL="http://my.issue.tracker/" #optional
+
+[[mods]] #mandatory
+
+modId="stweaks" #mandatory
+
+version="${1.16.1-1.1.0}" #mandatory
+
+displayName="Simple Tweaks" #mandatory
+
+updateJSONURL="http://myurl.me/" #optional
+
+displayURL="http://example.com/" #optional
+
+logoFile="" #optional
+
+credits="All assets for this mod were designed by me. Special Thanks to Modders Legacy for Structure Gel API." #optional
+
+authors="BlueBoat29" #optional
+
+description='''
+A mod that strives to add simple features to vanilla minecraft.
+
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.stweaks]] #optional
+    # the modid of the dependency
+    modId="forge" #mandatory
+    # Does this dependency have to exist - if not, ordering below must be specified
+    mandatory=true #mandatory
+    # The version range of the dependency
+    versionRange="[32,)" #mandatory
+    # An ordering relationship for the dependency - BEFORE or AFTER required if the relationship is not mandatory
+    ordering="NONE"
+    # Side this dependency is applied on - BOTH, CLIENT or SERVER
+    side="BOTH"
+# Here's another dependency
+[[dependencies.stweaks]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.1]"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.stweaks]] 
+    modId="structure_gel" 
+    mandatory=true 
+    versionRange="[1.2.0,]" 
+    ordering="NONE"
+    side="BOTH"
+
