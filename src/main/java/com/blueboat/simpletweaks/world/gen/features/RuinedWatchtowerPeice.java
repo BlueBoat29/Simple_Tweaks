@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.blueboat.simpletweaks.SimpleTweaks;
-import com.blueboat.simpletweaks.util.StructureRegister;
+import com.blueboat.simpletweaks.world.gen.StructureRegister;
 import com.legacy.structure_gel.structures.GelStructurePiece;
 import com.legacy.structure_gel.structures.jigsaw.JigsawRegistryHelper;
 import net.minecraft.nbt.CompoundNBT;

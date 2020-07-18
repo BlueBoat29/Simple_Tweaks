@@ -1,9 +1,9 @@
-package com.blueboat.simpletweaks.util;
+package com.blueboat.simpletweaks.world.gen;
 
 import java.util.Set;
 
 import com.blueboat.simpletweaks.SimpleTweaks;
-import com.blueboat.simpletweaks.world.gen.StructureConfig;
+import com.blueboat.simpletweaks.util.RegistryHandler;
 import com.blueboat.simpletweaks.world.gen.features.RuinedWatchtowerPeice;
 import com.blueboat.simpletweaks.world.gen.features.RuinedWatchtowerStructure;
 import com.legacy.structure_gel.util.RegistryHelper;
@@ -37,11 +37,14 @@ public class StructureRegister {
 	
 	public void commonInit(final FMLCommonSetupEvent event)
 	{
-		for (Biome biome : ForgeRegistries.BIOMES.getValues())
-		{			
-			if (StructureConfig.COMMON.ruined_watchtower.isBiomeAllowed(biome))
-				RegistryHelper.addStructure(biome, Structures.RUINED_WATCHTOWER.getFirst());
-
+		for(Biome biome: ForgeRegistries.BIOMES) 
+		{
+			
+			if(biome.getCategory() == Biome.Category.NETHER) 
+			{ if(biome == Biomes.field_235252_ay_) {
+					RegistryHelper.addStructure(biome, Structures.RUINED_WATCHTOWER.getFirst());
+				}
+			}
 		}
 	}
 

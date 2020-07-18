@@ -19,7 +19,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.blueboat.simpletweaks.util.RegistryHandler;
-import com.blueboat.simpletweaks.util.StructureRegister;
+import com.blueboat.simpletweaks.world.gen.StructureRegister;
 
 
 @Mod("stweaks")
