@@ -5,6 +5,7 @@ import com.legacy.structure_gel.structures.GelStructureStart;
 import com.legacy.structure_gel.util.ConfigTemplates.StructureConfigBuilder;
 import com.mojang.serialization.Codec;
 
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MutableBoundingBox;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.ChunkGenerator;
@@ -40,10 +41,17 @@ public class RuinedWatchtowerStructure extends GelConfigStructure<NoFeatureConfi
 			super(structureIn, chunkX, chunkZ, boundsIn, referenceIn, seed);
 		}
 
+
 		@Override
-		public void func_230364_a_(ChunkGenerator p_230364_1_, TemplateManager p_230364_2_, int p_230364_3_,
-				int p_230364_4_, Biome p_230364_5_, NoFeatureConfig p_230364_6_) {
-			
-		}		
+		public void func_230364_a_(ChunkGenerator generator, TemplateManager templateManagerIn, int chunkX, int chunkZ, Biome biomeIn, NoFeatureConfig config)
+		{
+			BlockPos pos = new BlockPos(chunkX * 16 + this.rand.nextInt(5), 0, chunkZ * 16 + this.rand.nextInt(5));
+			RuinedWatchtowerPeice.assemble(generator, templateManagerIn, pos, this.components, this.rand);
+			this.recalculateStructureSize();
+		}
+
+
+	
+		
 	}
 }

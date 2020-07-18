@@ -19,6 +19,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.blueboat.simpletweaks.util.RegistryHandler;
+import com.blueboat.simpletweaks.util.StructureRegister;
 
 
 @Mod("stweaks")
@@ -37,6 +38,7 @@ public class SimpleTweaks
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
 
         RegistryHandler.Init();
+        new StructureRegister();
         
         MinecraftForge.EVENT_BUS.register(this);
       

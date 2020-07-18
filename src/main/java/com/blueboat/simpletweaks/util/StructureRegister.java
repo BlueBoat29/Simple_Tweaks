@@ -30,21 +30,18 @@ import net.minecraftforge.fml.config.ModConfig;
 public class StructureRegister {
 	
 	public StructureRegister() {
-		
+
 		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, StructureConfig.COMMON_SPEC);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonInit);
-
 	}
 	
 	public void commonInit(final FMLCommonSetupEvent event)
 	{
 		for (Biome biome : ForgeRegistries.BIOMES.getValues())
 		{			
-			Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(biome);
-			
-			if (biome == Biomes.field_235254_j_) {
-			RegistryHelper.addStructure(Biomes.field_235254_j_, Structures.RUINED_WATCHTOWER.getFirst());
-			}
+			if (StructureConfig.COMMON.ruined_watchtower.isBiomeAllowed(biome))
+				RegistryHelper.addStructure(biome, Structures.RUINED_WATCHTOWER.getFirst());
+
 		}
 	}
 

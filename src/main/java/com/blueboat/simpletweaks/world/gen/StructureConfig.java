@@ -23,7 +23,7 @@ public class StructureConfig {
 
 		public Common(ForgeConfigSpec.Builder builder)
 		{
-			this.ruined_watchtower = new ConfigTemplates.BiomeStructureConfig(builder, "ruined_watchtower", 1, 20, 8, "desert");
+			this.ruined_watchtower = new ConfigTemplates.BiomeStructureConfig(builder, "ruined_watchtower", 1, 20, 8, "minecraft:desert");
 		}
 	}
 }
