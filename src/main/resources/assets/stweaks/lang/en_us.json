@@ -35,5 +35,6 @@
 	"block.stweaks.warped_thatch_block" : "Warped Thatch",
 	"block.stweaks.warped_thatch_slab_block" : "Warped Thatch Slab",
 	"block.stweaks.warped_thatch_stair_block" : "Warped Thatch Stair",
-	"block.stweaks.soul_coal_ore" : "Nether Coal Ore"
+	"block.stweaks.soul_coal_ore" : "Nether Coal Ore",
+	"block.stweaks.hard_sand_block" : "Hardened Sand Block"
 }
