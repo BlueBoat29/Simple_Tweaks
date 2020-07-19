@@ -1,0 +1,128 @@
+---- Minecraft Crash Report ----
+// You should try our sister game, Minceraft!
+
+Time: 7/18/20 6:57 PM
+Description: Exception generating new chunk
+
+java.lang.IllegalArgumentException: bound must be positive
+	at java.util.Random.nextInt(Random.java:388) ~[?:1.8.0_222] {}
+	at net.minecraft.world.gen.feature.jigsaw.JigsawPattern.getRandomPiece(JigsawPattern.java:74) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.gen.feature.jigsaw.JigsawManager.func_236823_a_(JigsawManager.java:45) ~[?:?] {re:classloading}
+	at com.blueboat.simpletweaks.world.gen.features.RuinedWatchtowerPeice.assemble(RuinedWatchtowerPeice.java:28) ~[?:?] {re:classloading}
+	at com.blueboat.simpletweaks.world.gen.features.RuinedWatchtowerStructure$Start.func_230364_a_(RuinedWatchtowerStructure.java:49) ~[?:?] {re:classloading}
+	at com.blueboat.simpletweaks.world.gen.features.RuinedWatchtowerStructure$Start.func_230364_a_(RuinedWatchtowerStructure.java:1) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.feature.structure.Structure.func_236389_a_(Structure.java:217) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.gen.feature.StructureFeature.func_236270_a_(StructureFeature.java:28) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.func_235955_a_(ChunkGenerator.java:238) ~[?:?] {re:classloading}
+	at net.minecraft.world.gen.ChunkGenerator.func_235954_a_(ChunkGenerator.java:230) ~[?:?] {re:classloading}
+	at net.minecraft.world.chunk.ChunkStatus.lambda$static$2(ChunkStatus.java:41) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.chunk.ChunkStatus.doGenerationWork(ChunkStatus.java:198) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.world.server.ChunkManager.lambda$null$18(ChunkManager.java:547) ~[?:?] {re:classloading}
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-3.0.25.jar:?] {}
+	at net.minecraft.world.server.ChunkManager.lambda$func_223156_b$20(ChunkManager.java:545) ~[?:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture.uniCompose(CompletableFuture.java:952) ~[?:1.8.0_222] {}
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:926) ~[?:1.8.0_222] {}
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:442) ~[?:1.8.0_222] {}
+	at net.minecraft.world.chunk.ChunkTaskPriorityQueueSorter.lambda$null$1(ChunkTaskPriorityQueueSorter.java:44) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.driveOne(DelegatedTaskExecutor.java:95) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.driveWhile(DelegatedTaskExecutor.java:139) ~[?:?] {re:classloading}
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.run(DelegatedTaskExecutor.java:107) ~[?:?] {re:classloading}
+	at java.util.concurrent.ForkJoinTask$RunnableExecuteAction.exec(ForkJoinTask.java:1402) ~[?:1.8.0_222] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) ~[?:1.8.0_222] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) ~[?:1.8.0_222] {}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) ~[?:1.8.0_222] {}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157) ~[?:1.8.0_222] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at java.util.Random.nextInt(Random.java:388)
+	at net.minecraft.world.gen.feature.jigsaw.JigsawPattern.getRandomPiece(JigsawPattern.java:74)
+	at net.minecraft.world.gen.feature.jigsaw.JigsawManager.func_236823_a_(JigsawManager.java:45)
+	at com.blueboat.simpletweaks.world.gen.features.RuinedWatchtowerPeice.assemble(RuinedWatchtowerPeice.java:28)
+	at com.blueboat.simpletweaks.world.gen.features.RuinedWatchtowerStructure$Start.func_230364_a_(RuinedWatchtowerStructure.java:49)
+	at com.blueboat.simpletweaks.world.gen.features.RuinedWatchtowerStructure$Start.func_230364_a_(RuinedWatchtowerStructure.java:1)
+	at net.minecraft.world.gen.feature.structure.Structure.func_236389_a_(Structure.java:217)
+	at net.minecraft.world.gen.feature.StructureFeature.func_236270_a_(StructureFeature.java:28)
+	at net.minecraft.world.gen.ChunkGenerator.func_235955_a_(ChunkGenerator.java:238)
+	at net.minecraft.world.gen.ChunkGenerator.func_235954_a_(ChunkGenerator.java:230)
+	at net.minecraft.world.chunk.ChunkStatus.lambda$static$2(ChunkStatus.java:41)
+	at net.minecraft.world.chunk.ChunkStatus.doGenerationWork(ChunkStatus.java:198)
+
+-- Chunk to be generated --
+Details:
+	Location: 4,21
+	Position hash: 90194313220
+	Generator: net.minecraft.world.gen.NoiseChunkGenerator@e76f79f
+Stacktrace:
+	at net.minecraft.world.server.ChunkManager.lambda$null$18(ChunkManager.java:547)
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38)
+	at net.minecraft.world.server.ChunkManager.lambda$func_223156_b$20(ChunkManager.java:545)
+	at java.util.concurrent.CompletableFuture.uniCompose(CompletableFuture.java:952)
+	at java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:926)
+	at java.util.concurrent.CompletableFuture$Completion.run(CompletableFuture.java:442)
+	at net.minecraft.world.chunk.ChunkTaskPriorityQueueSorter.lambda$null$1(ChunkTaskPriorityQueueSorter.java:44)
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.driveOne(DelegatedTaskExecutor.java:95)
+	at net.minecraft.util.concurrent.DelegatedTaskExecutor.driveWhile(DelegatedTaskExecutor.java:139)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ServerPlayerEntity['Dev'/409, l='ServerLevel[New World]', x=13.57, y=69.58, z=42.02]]
+	Chunk stats: ServerChunkCache: 1585
+	Level dimension: minecraft:the_nether
+	Derived: true
+	Level spawn location: World: (160,64,144), Chunk: (at 0,4,0 in 10,9; contains blocks 160,0,144 to 175,255,159), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 690 game time, 690 day time
+	Level name: New World
+	Level game mode: Game mode: creative (ID 1). Hardcore: false. Cheats: true
+	Level weather: Rain time: 73051 (now: false), thunder time: 65905 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.updateTimeLightAndEntities(MinecraftServer.java:892)
+	at net.minecraft.server.MinecraftServer.tick(MinecraftServer.java:825)
+	at net.minecraft.server.integrated.IntegratedServer.tick(IntegratedServer.java:87)
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:665)
+	at net.minecraft.server.MinecraftServer.lambda$func_240784_a_$0(MinecraftServer.java:231)
+	at java.lang.Thread.run(Thread.java:748)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.1
+	Minecraft Version ID: 1.16.1
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_222, AdoptOpenJDK
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), 
+	Memory: 647136512 bytes (617 MB) / 1487929344 bytes (1419 MB) up to 2820669440 bytes (2690 MB)
+	CPUs: 8
+	JVM Flags: 1 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	ModLauncher: 5.1.0+69+master.79f13f7
+	ModLauncher launch target: fmluserdevclient
+	ModLauncher naming: mcp
+	ModLauncher services: 
+		/eventbus-2.2.0-service.jar eventbus PLUGINSERVICE 
+		/forge-1.16.1-32.0.44_mapped_snapshot_20200514-1.16-launcher.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.1-32.0.44_mapped_snapshot_20200514-1.16-launcher.jar runtime_enum_extender PLUGINSERVICE 
+		/accesstransformers-2.1.3-shadowed.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.1-32.0.44_mapped_snapshot_20200514-1.16-launcher.jar capability_inject_definalize PLUGINSERVICE 
+		/forge-1.16.1-32.0.44_mapped_snapshot_20200514-1.16-launcher.jar runtimedistcleaner PLUGINSERVICE 
+		/forge-1.16.1-32.0.44_mapped_snapshot_20200514-1.16-launcher.jar fml TRANSFORMATIONSERVICE 
+	FML: 32.0
+	Forge: net.minecraftforge:32.0.44
+	FML Language Providers: 
+		javafml@32.0
+		minecraft@1
+	Mod List: 
+		client-extra.jar Minecraft {minecraft@1.16.1 DONE}
+		main Simple Tweaks {stweaks@1.16.1-1.1.0 DONE}
+		forge-1.16.1-32.0.44_mapped_snapshot_20200514-1.16-recomp.jar Forge {forge@32.0.44 DONE}
+		structure-gel-api-1.16.1-1.2.0-deobf.jar Structure Gel API {structure_gel@NONE DONE}
+	Player Count: 1 / 8; [ServerPlayerEntity['Dev'/409, l='ServerLevel[New World]', x=13.57, y=69.58, z=42.02]]
+	Data Packs: vanilla, mod:forge (incompatible), mod:structure_gel, mod:stweaks
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'forge'

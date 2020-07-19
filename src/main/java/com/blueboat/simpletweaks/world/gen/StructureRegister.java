@@ -39,12 +39,7 @@ public class StructureRegister {
 	{
 		for(Biome biome: ForgeRegistries.BIOMES) 
 		{
-			
-			if(biome.getCategory() == Biome.Category.NETHER) 
-			{ if(biome == Biomes.field_235252_ay_) {
-					RegistryHelper.addStructure(biome, Structures.RUINED_WATCHTOWER.getFirst());
-				}
-			}
+			RegistryHelper.addStructure(Biomes.field_235252_ay_, Structures.RUINED_WATCHTOWER.getFirst());
 		}
 	}
 

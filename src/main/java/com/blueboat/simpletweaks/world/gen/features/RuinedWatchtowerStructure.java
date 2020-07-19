@@ -48,6 +48,7 @@ public class RuinedWatchtowerStructure extends GelConfigStructure<NoFeatureConfi
 			BlockPos pos = new BlockPos(chunkX * 16 + this.rand.nextInt(5), 0, chunkZ * 16 + this.rand.nextInt(5));
 			RuinedWatchtowerPeice.assemble(generator, templateManagerIn, pos, this.components, this.rand);
 			this.recalculateStructureSize();
+			this.components.forEach(c -> c.offset(0, -1, 0));
 		}
 
 
