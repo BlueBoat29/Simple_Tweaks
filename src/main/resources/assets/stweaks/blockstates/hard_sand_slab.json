@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "stweaks:block/hard_sand_slab"
+    },
+    "type=double": {
+      "model": "stweaks:block/hard_sand_block"
+    },
+    "type=top": {
+      "model": "stweaks:block/hard_sand_slab_top"
+    }
+  }
+}

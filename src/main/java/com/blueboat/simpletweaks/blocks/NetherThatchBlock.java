@@ -7,13 +7,14 @@ import net.minecraftforge.common.ToolType;
 
 public class NetherThatchBlock extends Block{
 
+	public static Properties properties = Block.Properties.create(Material.PLANTS)
+			.sound(SoundType.PLANT)
+			.hardnessAndResistance(1f, 5f)
+			.harvestTool(ToolType.AXE)
+			.harvestLevel(0);
+	
 	public NetherThatchBlock() {
-		super(Block.Properties.create(Material.PLANTS)
-				.sound(SoundType.PLANT)
-				.hardnessAndResistance(1f, 5f)
-				.harvestTool(ToolType.AXE)
-				.harvestLevel(0)
-				);
+		super(properties);
 	}
 
 	

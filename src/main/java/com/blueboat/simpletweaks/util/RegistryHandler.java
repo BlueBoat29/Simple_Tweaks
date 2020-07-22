@@ -4,12 +4,14 @@ import com.blueboat.simpletweaks.SimpleTweaks;
 import com.blueboat.simpletweaks.blocks.HardenedSandBlock;
 import com.blueboat.simpletweaks.blocks.JukeboxBase;
 import com.blueboat.simpletweaks.blocks.NetherThatchBlock;
-import com.blueboat.simpletweaks.blocks.NetherThatchSlab;
-import com.blueboat.simpletweaks.blocks.NetherThatchStair;
+import com.blueboat.simpletweaks.blocks.StairBase;
+import com.blueboat.simpletweaks.blocks.WallBase;
 import com.blueboat.simpletweaks.blocks.QuartzGoldBlock;
+import com.blueboat.simpletweaks.blocks.SlabBase;
 import com.blueboat.simpletweaks.blocks.SoulCoalOre;
 import com.blueboat.simpletweaks.blocks.WitheredGlass;
 import com.blueboat.simpletweaks.blocks.WitheredGlassPane;
+import com.blueboat.simpletweaks.enchantment.PoisonEnchantment;
 import com.blueboat.simpletweaks.items.BlockItemBase;
 import com.blueboat.simpletweaks.items.CoalChunck;
 import com.blueboat.simpletweaks.items.ItemBase;
@@ -25,6 +27,8 @@ import com.blueboat.simpletweaks.items.QGoldSword;
 import com.blueboat.simpletweaks.items.GrindingBowlItem;
 
 import net.minecraft.block.Block;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -35,11 +39,14 @@ public class RegistryHandler {
 	private static final String MODID = SimpleTweaks.MOD_ID;
 	public final static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 	public final static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
+	public final static DeferredRegister<Enchantment> ENCHANTMENT = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, MODID);
 	
 	public static void Init() {
 		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
 		BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());		
 	}
+	//Enchantments
+	public static final RegistryObject<Enchantment> POISON_BARB = ENCHANTMENT.register("poison_bard", () -> new PoisonEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlotType.MAINHAND));
 	
 	//Items
 	public static final RegistryObject<Item> GRINDING_BOWL = ITEMS.register("grinding_bowl", GrindingBowlItem::new);
@@ -73,13 +80,16 @@ public class RegistryHandler {
 	public static final RegistryObject<Block> CRIMSON_JUKEBOX_BLOCK = BLOCKS.register("crimson_jukebox_block", JukeboxBase::new);
 	public static final RegistryObject<Block> WARPED_JUKEBOX_BLOCK = BLOCKS.register("warped_jukebox_block", JukeboxBase::new);
 	public static final RegistryObject<Block> CRIMSON_THATCH_BLOCK = BLOCKS.register("crimson_thatch_block", NetherThatchBlock::new);
-	public static final RegistryObject<Block> CRIMSON_THATCH_SLAB_BLOCK = BLOCKS.register("crimson_thatch_slab_block", NetherThatchSlab::new);
-	public static final RegistryObject<Block> CRIMSON_THATCH_STAIR_BLOCK = BLOCKS.register("crimson_thatch_stair_block", NetherThatchStair::new);
+	public static final RegistryObject<Block> CRIMSON_THATCH_SLAB_BLOCK = BLOCKS.register("crimson_thatch_slab_block", () -> new SlabBase(NetherThatchBlock.properties));
+	public static final RegistryObject<Block> CRIMSON_THATCH_STAIR_BLOCK = BLOCKS.register("crimson_thatch_stair_block", () -> new StairBase(NetherThatchBlock.properties));
 	public static final RegistryObject<Block> WARPED_THATCH_BLOCK = BLOCKS.register("warped_thatch_block", NetherThatchBlock::new);
-	public static final RegistryObject<Block> WARPED_THATCH_SLAB_BLOCK = BLOCKS.register("warped_thatch_slab_block", NetherThatchSlab::new);
-	public static final RegistryObject<Block> WARPED_THATCH_STAIR_BLOCK = BLOCKS.register("warped_thatch_stair_block", NetherThatchStair::new);
+	public static final RegistryObject<Block> WARPED_THATCH_SLAB_BLOCK = BLOCKS.register("warped_thatch_slab_block", () -> new SlabBase(NetherThatchBlock.properties));
+	public static final RegistryObject<Block> WARPED_THATCH_STAIR_BLOCK = BLOCKS.register("warped_thatch_stair_block", () -> new StairBase(NetherThatchBlock.properties));
 	public static final RegistryObject<Block> SOUL_COAL_ORE = BLOCKS.register("soul_coal_ore", SoulCoalOre::new);
 	public static final RegistryObject<Block> HARD_SAND_BLOCK = BLOCKS.register("hard_sand_block", HardenedSandBlock::new);
+	public static final RegistryObject<Block> HARD_SAND_SLAB = BLOCKS.register("hard_sand_slab", () -> new SlabBase(HardenedSandBlock.properties));
+	public static final RegistryObject<Block> HARD_SAND_STAIR = BLOCKS.register("hard_sand_stair", () -> new StairBase(HardenedSandBlock.properties));
+	public static final RegistryObject<Block> HARD_SAND_WALL = BLOCKS.register("hard_sand_wall", () -> new WallBase(HardenedSandBlock.properties));
 	
 	//Block Items
 	public static final RegistryObject<Item> WITHERED_GLASS_BLOCK_ITEM = ITEMS.register("withered_glass_block_item", () -> new BlockItemBase(WITHERED_GLASS_BLOCK.get()));
@@ -95,5 +105,9 @@ public class RegistryHandler {
 	public static final RegistryObject<Item> WARPED_THATCH_STAIR_BLOCK_ITEM= ITEMS.register("warped_thatch_stair_block_item", () -> new BlockItemBase(WARPED_THATCH_STAIR_BLOCK.get()));
 	public static final RegistryObject<Item> SOUL_COAL_ORE_ITEM = ITEMS.register("soul_coal_ore_item", () -> new BlockItemBase(SOUL_COAL_ORE.get()));
 	public static final RegistryObject<Item> HARD_SAND_BLOCK_ITEM = ITEMS.register("hard_sand_block_item", () -> new BlockItemBase(HARD_SAND_BLOCK.get()));
+	public static final RegistryObject<Item> HARD_SAND_SLAB_ITEM = ITEMS.register("hard_sand_slab_item", () -> new BlockItemBase(HARD_SAND_SLAB.get()));
+	public static final RegistryObject<Item> HARD_SAND_STAIR_ITEM = ITEMS.register("hard_sand_stair_item", () -> new BlockItemBase(HARD_SAND_STAIR.get()));
+	public static final RegistryObject<Item> HARD_SAND_WALL_ITEM = ITEMS.register("hard_sand_wall_item", () -> new BlockItemBase(HARD_SAND_WALL.get()));
+	
 }
 

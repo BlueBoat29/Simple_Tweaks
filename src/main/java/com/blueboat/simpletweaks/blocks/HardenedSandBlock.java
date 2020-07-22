@@ -7,12 +7,13 @@ import net.minecraftforge.common.ToolType;
 
 public class HardenedSandBlock extends Block{
 
+	public static Properties properties = Block.Properties.create(Material.ROCK)
+			.sound(SoundType.SAND)
+			.hardnessAndResistance(1f, 2f).harvestTool(ToolType.PICKAXE).harvestLevel(0);
+			
+	
 	public HardenedSandBlock() {
-		super(Block.Properties.create(Material.SAND)
-				.sound(SoundType.SAND)
-				.hardnessAndResistance(1f, 2f)
-				.harvestTool(ToolType.PICKAXE)
-				.harvestLevel(0));
+		super(properties);
 
 	}
 

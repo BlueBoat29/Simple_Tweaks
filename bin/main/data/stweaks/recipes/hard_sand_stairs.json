@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern":
+  [
+    "x",
+    "xx",
+    "xxx"
+  ],
+  "key":
+  {
+    "x":
+    {
+      "item": "stweaks:hard_sand_block_item"
+    }
+  },
+  "result":
+  {
+    "item": "stweaks:hard_sand_stair_item",
+    "count": 8
+  }
+}

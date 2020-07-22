@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "stweaks:blocks/warped_thatch",
+    "top": "stweaks:blocks/warped_thatch",
+    "side": "stweaks:blocks/warped_thatch"
+  }
+}

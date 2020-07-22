@@ -12,12 +12,11 @@ import net.minecraftforge.common.ToolType;
 public class SoulCoalOre extends OreBlock{
 
 	public SoulCoalOre() {
-		super(Block.Properties
-				.create(Material.EARTH)
+		super(Block.Properties.create(Material.EARTH)
 				.sound(SoundType.GROUND)
 				.hardnessAndResistance(1f, 3f)
-				.harvestLevel(0)		
-				.harvestTool(ToolType.SHOVEL));
+				.harvestTool(ToolType.SHOVEL)
+				.harvestLevel(0));
 						
 	}
 	

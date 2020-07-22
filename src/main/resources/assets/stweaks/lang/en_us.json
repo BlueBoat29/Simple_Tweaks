@@ -10,7 +10,8 @@
 	"item.stweaks.quartz_gold_dust": "Quartz Gold Alloy",
 	"item.stweaks.quartz_gold_ingot": "Quartz Gold Ingot",
 	"item.stweaks.coal_chunck" : "Coal Chunks",
-	//Tools
+	"item.stweaks.poison_enchantment_book" : "Enchanted Book",
+	//Tool
 	"item.stweaks.quartz_gold_sword": "Quartz Gold Sword",
 	"item.stweaks.quartz_gold_pickaxe": "Quartz Gold Pickaxe",
 	"item.stweaks.quartz_gold_axe": "Quartz Gold Axe",
@@ -36,5 +37,8 @@
 	"block.stweaks.warped_thatch_slab_block" : "Warped Thatch Slab",
 	"block.stweaks.warped_thatch_stair_block" : "Warped Thatch Stair",
 	"block.stweaks.soul_coal_ore" : "Nether Coal Ore",
-	"block.stweaks.hard_sand_block" : "Hardened Sand Block"
+	"block.stweaks.hard_sand_block" : "Hardened Sand",
+	"block.stweaks.hard_sand_slab" : "Hardened Sand Slab",
+	"block.stweaks.hard_sand_stair" : "Hardened Sand Stair",
+	"block.stweaks.hard_sand_wall" : "Hardened Sand Wall"
 }
