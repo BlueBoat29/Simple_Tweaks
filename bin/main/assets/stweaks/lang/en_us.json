@@ -40,5 +40,9 @@
 	"block.stweaks.hard_sand_block" : "Hardened Sand",
 	"block.stweaks.hard_sand_slab" : "Hardened Sand Slab",
 	"block.stweaks.hard_sand_stair" : "Hardened Sand Stair",
-	"block.stweaks.hard_sand_wall" : "Hardened Sand Wall"
+	"block.stweaks.hard_sand_wall" : "Hardened Sand Wall",
+	//Enchants
+	"enchantment.stweaks.poison_barb" : "Poison Barbs",
+	//Potions
+	"effect.stweaks.better_poison" : "Etherial Poison"
 }

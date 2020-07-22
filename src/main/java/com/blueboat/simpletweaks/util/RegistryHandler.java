@@ -24,12 +24,14 @@ import com.blueboat.simpletweaks.items.QGoldLeggings;
 import com.blueboat.simpletweaks.items.QGoldPickaxe;
 import com.blueboat.simpletweaks.items.QGoldSpade;
 import com.blueboat.simpletweaks.items.QGoldSword;
+import com.blueboat.simpletweaks.potions.BetterPoison;
 import com.blueboat.simpletweaks.items.GrindingBowlItem;
 
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Effect;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
@@ -40,13 +42,19 @@ public class RegistryHandler {
 	public final static DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 	public final static DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
 	public final static DeferredRegister<Enchantment> ENCHANTMENT = DeferredRegister.create(ForgeRegistries.ENCHANTMENTS, MODID);
+	public final static DeferredRegister<Effect> POTIONS = DeferredRegister.create(ForgeRegistries.POTIONS, MODID);
 	
 	public static void Init() {
 		ITEMS.register(FMLJavaModLoadingContext.get().getModEventBus());
-		BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());		
+		BLOCKS.register(FMLJavaModLoadingContext.get().getModEventBus());
+		ENCHANTMENT.register(FMLJavaModLoadingContext.get().getModEventBus());
+		POTIONS.register(FMLJavaModLoadingContext.get().getModEventBus());
 	}
 	//Enchantments
-	public static final RegistryObject<Enchantment> POISON_BARB = ENCHANTMENT.register("poison_bard", () -> new PoisonEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlotType.MAINHAND));
+	public static final RegistryObject<Enchantment> POISON_BARB = ENCHANTMENT.register("poison_barb", () -> new PoisonEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlotType.MAINHAND));
+	
+	//Potions
+	public static final RegistryObject<Effect> BETTER_POISON = POTIONS.register("better_poison", BetterPoison::new);
 	
 	//Items
 	public static final RegistryObject<Item> GRINDING_BOWL = ITEMS.register("grinding_bowl", GrindingBowlItem::new);

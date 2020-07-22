@@ -10,7 +10,6 @@ import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -58,13 +57,25 @@ public class PoisonEnchantment extends Enchantment{
 		@SubscribeEvent
 		public static void DoPoison(AttackEntityEvent event) 
 		{
-			int level = EnchantmentHelper.getMaxEnchantmentLevel(RegistryHandler.POISON_BARB.get(), event.getEntityLiving());
+			int level = EnchantmentHelper.getEnchantmentLevel(RegistryHandler.POISON_BARB.get(), event.getEntityLiving().getHeldItemMainhand());
 			
 			if(level > 0) {
 				if(event.getTarget().isAlive()) 
 				{
 					LivingEntity target = (LivingEntity) event.getTarget();
-					target.addPotionEffect(new EffectInstance(Effects.POISON, 140));
+					switch(level) 
+					{
+					case 1: target.addPotionEffect(new EffectInstance(RegistryHandler.BETTER_POISON.get(), 140));
+						break;
+					case 2: target.addPotionEffect(new EffectInstance(RegistryHandler.BETTER_POISON.get(), 240));
+						break;
+					case 3: target.addPotionEffect(new EffectInstance(RegistryHandler.BETTER_POISON.get(), 240, 2));
+						break;
+					default: break;
+					
+					}
+					
+					
 				}
 			}
 			
