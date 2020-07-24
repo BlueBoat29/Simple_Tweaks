@@ -2,21 +2,13 @@ package com.blueboat.simpletweaks.enchantment;
 
 import com.blueboat.simpletweaks.SimpleTweaks;
 import com.blueboat.simpletweaks.util.RegistryHandler;
-import com.google.common.collect.Multimap;
-
-import net.minecraft.client.particle.EnchantmentTableParticle;
-import net.minecraft.client.particle.Particle;
-import net.minecraft.client.world.ClientWorld;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnchantmentType;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.ai.attributes.Attribute;
-import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.particles.ParticleTypes;
-import net.minecraft.util.text.ITextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.AttackEntityEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
