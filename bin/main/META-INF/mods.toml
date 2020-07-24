@@ -46,10 +46,3 @@ A mod that strives to add simple features to vanilla minecraft.
     versionRange="[1.16.1]"
     ordering="NONE"
     side="BOTH"
-[[dependencies.stweaks]] 
-    modId="structure_gel" 
-    mandatory=true 
-    versionRange="[1.1.0,]" 
-    ordering="NONE"
-    side="BOTH"
-
