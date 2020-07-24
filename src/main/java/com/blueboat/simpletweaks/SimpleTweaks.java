@@ -19,7 +19,7 @@ import com.blueboat.simpletweaks.util.RegistryHandler;
 public class SimpleTweaks
 {
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public static final String MOD_ID = "stweaks";
     public SimpleTweaks() {

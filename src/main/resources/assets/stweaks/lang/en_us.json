@@ -43,6 +43,7 @@
 	"block.stweaks.hard_sand_wall" : "Hardened Sand Wall",
 	//Enchants
 	"enchantment.stweaks.poison_barb" : "Poison Barbs",
+	"enchantment.stweaks.echo" : "Echoing",
 	//Potions
 	"effect.stweaks.better_poison" : "Etherial Poison"
 }

@@ -44,12 +44,11 @@ public class OreGenHandler {
 		}
 	}
 
-
 	private static void GenOre(Biome biome, int count, int bottomOffset, int topOffset, int max, OreFeatureConfig.FillerBlockType filler, BlockState defaultBlockState, int size) 
 	{
 		CountRangeConfig range = new CountRangeConfig(count, bottomOffset, topOffset, max);
 		OreFeatureConfig feature = new OreFeatureConfig(filler, defaultBlockState, size);
-		ConfiguredPlacement config = Placement.COUNT_RANGE.configure(range);
+		ConfiguredPlacement<CountRangeConfig> config = Placement.COUNT_RANGE.configure(range);
 		biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, Feature.ORE.withConfiguration(feature).withPlacement(config));
 		
 	}

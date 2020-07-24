@@ -11,6 +11,7 @@ import com.blueboat.simpletweaks.blocks.SlabBase;
 import com.blueboat.simpletweaks.blocks.SoulCoalOre;
 import com.blueboat.simpletweaks.blocks.WitheredGlass;
 import com.blueboat.simpletweaks.blocks.WitheredGlassPane;
+import com.blueboat.simpletweaks.enchantment.EchoEnchantment;
 import com.blueboat.simpletweaks.enchantment.PoisonEnchantment;
 import com.blueboat.simpletweaks.items.BlockItemBase;
 import com.blueboat.simpletweaks.items.CoalChunck;
@@ -52,6 +53,7 @@ public class RegistryHandler {
 	}
 	//Enchantments
 	public static final RegistryObject<Enchantment> POISON_BARB = ENCHANTMENT.register("poison_barb", () -> new PoisonEnchantment(Enchantment.Rarity.VERY_RARE, EquipmentSlotType.MAINHAND));
+	public static final RegistryObject<Enchantment> ECHO = ENCHANTMENT.register("echo", () -> new EchoEnchantment(Enchantment.Rarity.UNCOMMON, EquipmentSlotType.MAINHAND));
 	
 	//Potions
 	public static final RegistryObject<Effect> BETTER_POISON = POTIONS.register("better_poison", BetterPoison::new);
